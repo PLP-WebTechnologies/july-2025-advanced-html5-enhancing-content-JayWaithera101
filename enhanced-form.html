@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodCritique - Food Review Agency</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #0b3d0b;
+        color: #f8f8f2;
+    }
+    header, footer {
+        background-color: #064b06;
+        padding: 20px;
+        text-align: center;
+        color: #f8f8f2;
+    }
+    h1, h2, h3 {
+        color: #ffda77;
+        margin-top: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    .left-col {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    section {
+        background-color: #145214;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    ul, ol, dl {
+        padding-left: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0b3d0b;
+        color: #fff;
+    }
+    table caption {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #ffda77;
+    }
+    th, td {
+        border: 1px solid #ffda77;
+        padding: 8px;
+        text-align: left;
+    }
+    figure {
+        margin: 0;
+    }
+    img, video {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    fieldset {
+        border: 1px solid #ffda77;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        background-color: #0b3d0b;
+    }
+    legend {
+        font-weight: bold;
+        color: #ffda77;
+    }
+    label {
+        display: block;
+        margin-top: 8px;
+    }
+    input, select, textarea, button {
+        margin-top: 4px;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input, select, textarea {
+        background-color: #f8f8f2;
+        color: #000;
+    }
+    button {
+        background-color: #ffda77;
+        color: #064b06;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #ffd35c;
+    }
+    @media (max-width: 800px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FoodCritique Agency</h1>
+    <p>Serving honest restaurant reviews since 2020</p>
+</header>
+
+<div class="container">
+    <!-- Left Column -->
+    <div class="left-col">
+        <!-- Lists Section -->
+        <section>
+            <h2>Top-Rated Restaurants</h2>
+            <ul>
+                <li>La Bella Italia</li>
+                <li>Sakura Sushi House</li>
+                <li>The Spice Route</li>
+                <li>Urban Vegan Kitchen</li>
+            </ul>
+
+            <h3>Our Review Criteria</h3>
+            <ol>
+                <li>Taste & Flavor</li>
+                <li>Presentation</li>
+                <li>Service Quality</li>
+                <li>Value for Money</li>
+            </ol>
+
+            <h3>Food Industry Glossary</h3>
+            <dl>
+                <dt>Umami</dt>
+                <dd>A savory taste, one of the five basic tastes.</dd>
+                <dt>Al Dente</dt>
+                <dd>Italian term for pasta cooked to be firm to the bite.</dd>
+            </dl>
+        </section>
+
+        <!-- Table Section -->
+        <section>
+            <h2>Restaurant Comparison</h2>
+            <table>
+                <caption>Top Restaurants in 2025</caption>
+                <thead>
+                    <tr>
+                        <th>Restaurant</th>
+                        <th>Taste</th>
+                        <th>Cost</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>La Bella Italia</td>
+                        <td>★★★★★</td>
+                        <td>$$</td>
+                        <td>Lunch & Dinner</td>
+                    </tr>
+                    <tr>
+                        <td>Sakura Sushi House</td>
+                        <td>★★★★☆</td>
+                        <td>$$$</td>
+                        <td>All Day</td>
+                    </tr>
+                    <tr>
+                        <td>The Spice Route</td>
+                        <td>★★★★★</td>
+                        <td>$$</td>
+                        <td>Dinner Only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section>
+            <h2>Media Showcase</h2>
+            <figure>
+                <img src="https://via.placeholder.com/600x300?text=Delicious+Pasta" alt="Delicious pasta dish">
+                <figcaption>Signature dish from La Bella Italia</figcaption>
+            </figure>
+
+            <figure>
+                <video controls>
+                    <source src="sample-food.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+                <figcaption>Chef preparing sushi at Sakura Sushi House</figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <!-- Right Column: Form -->
+    <section>
+        <h2>Submit Your Restaurant Review</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone (Format: 123-456-7890):</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Restaurant Details</legend>
+                <label for="restaurant">Restaurant Name:</label>
+                <input type="text" id="restaurant" name="restaurant" required>
+
+                <label for="visit-date">Date of Visit:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+
+                <label for="rating">Taste Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                <label for="cost">Approximate Cost (USD):</label>
+                <input type="number" id="cost" name="cost" min="1" step="0.01" required>
+
+                <label for="meal-type">Meal Type:</label>
+                <select id="meal-type" name="meal-type" required>
+                    <option value="">Select...</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Review</legend>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" minlength="20" placeholder="Share your experience..." required></textarea>
+
+                <label for="photo">Upload Food Photo:</label>
+                <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+
+                <label>
+                    <input type="checkbox" name="terms" required> I confirm this review is based on my genuine experience.
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 FoodCritique Agency. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
